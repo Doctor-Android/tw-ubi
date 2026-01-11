@@ -1,0 +1,116 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="texture">
+      <feTurbulence baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+    </filter>
+  </defs>
+  
+  <!-- BU Logo (Left) -->
+  <g transform="translate(200, 200)">
+    <!-- Outer circle (lighter purple border) -->
+    <circle cx="0" cy="0" r="190" fill="#9B7EDE" opacity="0.3"/>
+    
+    <!-- Inner circle (darker purple) -->
+    <circle cx="0" cy="0" r="180" fill="#6B46C1"/>
+    
+    <!-- Bull's head silhouette (light purple) -->
+    <g transform="translate(0, -60)">
+      <!-- Bull head shape -->
+      <path d="M -40,-20 Q -40,-40 -20,-40 Q 0,-45 20,-40 Q 40,-40 40,-20 
+               Q 40,-10 35,-5 Q 30,0 25,5 Q 20,10 15,15 Q 10,20 5,25 
+               Q 0,30 -5,25 Q -10,20 -15,15 Q -20,10 -25,5 Q -30,0 -35,-5 
+               Q -40,-10 -40,-20 Z" 
+            fill="#C4B5FD" opacity="0.9"/>
+      
+      <!-- Left horn -->
+      <path d="M -30,-30 Q -35,-45 -25,-50 Q -15,-48 -10,-40" 
+            stroke="#C4B5FD" stroke-width="8" fill="none" stroke-linecap="round"/>
+      
+      <!-- Right horn -->
+      <path d="M 30,-30 Q 35,-45 25,-50 Q 15,-48 10,-40" 
+            stroke="#C4B5FD" stroke-width="8" fill="none" stroke-linecap="round"/>
+      
+      <!-- Eyes -->
+      <circle cx="-15" cy="-5" r="3" fill="#6B46C1"/>
+      <circle cx="15" cy="-5" r="3" fill="#6B46C1"/>
+      
+      <!-- Nose -->
+      <ellipse cx="0" cy="10" rx="8" ry="6" fill="#6B46C1"/>
+    </g>
+    
+    <!-- "BU" text (bold, light purple) -->
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="72" font-weight="bold" 
+          fill="#C4B5FD" text-anchor="middle" letter-spacing="4">BU</text>
+    
+    <!-- "Mind Your Own Business" text (white, curved) -->
+    <path id="curve-bu" d="M -150,120 Q 0,140 150,120" fill="none"/>
+    <text font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">
+      <textPath href="#curve-bu" startOffset="50%">Mind Your Own Business</textPath>
+    </text>
+  </g>
+  
+  <!-- UE Logo (Right) -->
+  <g transform="translate(600, 200)">
+    <!-- Outer circle (lighter green border) -->
+    <circle cx="0" cy="0" r="190" fill="#86EFAC" opacity="0.3"/>
+    
+    <!-- Inner circle (darker green) -->
+    <circle cx="0" cy="0" r="180" fill="#16A34A"/>
+    
+    <!-- Emblem: Vertical stem with leaves and Jerusalem cross (light green) -->
+    <g transform="translate(0, -60)">
+      <!-- Vertical stem -->
+      <rect x="-4" y="0" width="8" height="60" fill="#86EFAC" rx="4"/>
+      
+      <!-- Left bottom leaf -->
+      <ellipse cx="-20" cy="50" rx="12" ry="18" fill="#86EFAC" 
+               transform="rotate(-30 -20 50)"/>
+      
+      <!-- Right bottom leaf -->
+      <ellipse cx="20" cy="50" rx="12" ry="18" fill="#86EFAC" 
+               transform="rotate(30 20 50)"/>
+      
+      <!-- Left top leaf -->
+      <ellipse cx="-20" cy="30" rx="10" ry="15" fill="#86EFAC" 
+               transform="rotate(-20 -20 30)"/>
+      
+      <!-- Right top leaf -->
+      <ellipse cx="20" cy="30" rx="10" ry="15" fill="#86EFAC" 
+               transform="rotate(20 20 30)"/>
+      
+      <!-- Jerusalem cross at top -->
+      <!-- Central cross (vertical) -->
+      <rect x="-3" y="-25" width="6" height="20" fill="#86EFAC"/>
+      <!-- Central cross (horizontal) -->
+      <rect x="-8" y="-18" width="16" height="6" fill="#86EFAC"/>
+      
+      <!-- Top small cross -->
+      <rect x="-2" y="-35" width="4" height="8" fill="#86EFAC"/>
+      <rect x="-4" y="-32" width="8" height="4" fill="#86EFAC"/>
+      
+      <!-- Bottom small cross -->
+      <rect x="-2" y="-5" width="4" height="8" fill="#86EFAC"/>
+      <rect x="-4" y="-2" width="8" height="4" fill="#86EFAC"/>
+      
+      <!-- Left small cross -->
+      <rect x="-15" y="-15" width="4" height="8" fill="#86EFAC"/>
+      <rect x="-17" y="-12" width="8" height="4" fill="#86EFAC"/>
+      
+      <!-- Right small cross -->
+      <rect x="11" y="-15" width="4" height="8" fill="#86EFAC"/>
+      <rect x="9" y="-12" width="8" height="4" fill="#86EFAC"/>
+    </g>
+    
+    <!-- "UE" text (bold, light green) -->
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="72" font-weight="bold" 
+          fill="#86EFAC" text-anchor="middle" letter-spacing="4">UE</text>
+    
+    <!-- "Amar y Servir" text (white, curved) -->
+    <path id="curve-ue" d="M -150,120 Q 0,140 150,120" fill="none"/>
+    <text font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">
+      <textPath href="#curve-ue" startOffset="50%">Amar y Servir</textPath>
+    </text>
+  </g>
+</svg>
+

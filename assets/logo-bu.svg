@@ -1,0 +1,50 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="texture">
+      <feTurbulence baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer circle (lighter purple border) -->
+  <circle cx="200" cy="200" r="190" fill="#9B7EDE" opacity="0.3"/>
+  
+  <!-- Inner circle (darker purple) -->
+  <circle cx="200" cy="200" r="180" fill="#6B46C1"/>
+  
+  <!-- Bull's head silhouette (light purple) -->
+  <g transform="translate(200, 140)">
+    <!-- Bull head shape -->
+    <path d="M -40,-20 Q -40,-40 -20,-40 Q 0,-45 20,-40 Q 40,-40 40,-20 
+             Q 40,-10 35,-5 Q 30,0 25,5 Q 20,10 15,15 Q 10,20 5,25 
+             Q 0,30 -5,25 Q -10,20 -15,15 Q -20,10 -25,5 Q -30,0 -35,-5 
+             Q -40,-10 -40,-20 Z" 
+          fill="#C4B5FD" opacity="0.9"/>
+    
+    <!-- Left horn -->
+    <path d="M -30,-30 Q -35,-45 -25,-50 Q -15,-48 -10,-40" 
+          stroke="#C4B5FD" stroke-width="8" fill="none" stroke-linecap="round"/>
+    
+    <!-- Right horn -->
+    <path d="M 30,-30 Q 35,-45 25,-50 Q 15,-48 10,-40" 
+          stroke="#C4B5FD" stroke-width="8" fill="none" stroke-linecap="round"/>
+    
+    <!-- Eyes -->
+    <circle cx="-15" cy="-5" r="3" fill="#6B46C1"/>
+    <circle cx="15" cy="-5" r="3" fill="#6B46C1"/>
+    
+    <!-- Nose -->
+    <ellipse cx="0" cy="10" rx="8" ry="6" fill="#6B46C1"/>
+  </g>
+  
+  <!-- "BU" text (bold, light purple) -->
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="72" font-weight="bold" 
+        fill="#C4B5FD" text-anchor="middle" letter-spacing="4">BU</text>
+  
+  <!-- "Mind Your Own Business" text (white, curved) -->
+  <path id="curve-bu" d="M 50,320 Q 200,340 350,320" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">
+    <textPath href="#curve-bu" startOffset="50%">Mind Your Own Business</textPath>
+  </text>
+</svg>
+

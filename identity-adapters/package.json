@@ -1,0 +1,17 @@
+{
+  "name": "ubi-identity-adapters",
+  "version": "1.0.0",
+  "description": "Country-agnostic identity adapters for TW-UBI",
+  "main": "base.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "ubi",
+    "identity",
+    "personhood"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

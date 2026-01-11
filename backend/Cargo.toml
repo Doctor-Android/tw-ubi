@@ -1,0 +1,66 @@
+[package]
+name = "ubi-backend"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "ubi_backend"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ubi-server"
+path = "src/main.rs"
+
+[dependencies]
+# Web framework
+actix-web = "4.4"
+actix-rt = "2.9"
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Cryptography
+sha2 = "0.10"
+hex = "0.4"
+jsonwebtoken = "9.2"
+bcrypt = "0.15"
+totp-lite = "2.0"
+rand = "0.8"
+base32 = "0.4"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Configuration
+config = "0.14"
+dotenv = "0.15"
+
+# Logging
+env_logger = "0.11"
+log = "0.4"
+
+# Async
+tokio = { version = "1.35", features = ["full"] }
+futures = "0.3"
+
+# Decimal math (WAD only, no floats)
+rust_decimal = { version = "1.33", features = ["serde-float"] }
+
+# UUID
+uuid = { version = "1.6", features = ["v4", "serde"] }
+
+# Date/time
+chrono = { version = "0.4", features = ["serde"] }
+
+# Validation
+validator = { version = "0.18", features = ["derive"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
+rust_decimal_macros = "1.33"
+
